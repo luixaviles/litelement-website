@@ -1,14 +1,12 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import {LitelementWebsite} from '../src/LitelementWebsite.js';
+import { LitelementWebsite } from '../src/LitelementWebsite.js';
 import '../src/litelement-website.js';
 
 describe('LitelementWebsite', () => {
   let element: LitelementWebsite;
   beforeEach(async () => {
-    element = await fixture(html`
-      <litelement-website></litelement-website>
-    `);
+    element = await fixture(html` <litelement-website></litelement-website> `);
   });
 
   it('renders a h1', () => {

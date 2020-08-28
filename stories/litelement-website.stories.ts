@@ -5,7 +5,4 @@ export default {
   title: 'litelement-website',
 };
 
-export const App = () =>
-  html`
-    <litelement-website></litelement-website>
-  `;
+export const App = () => html` <litelement-website></litelement-website> `;

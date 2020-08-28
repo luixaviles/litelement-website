@@ -1,4 +1,4 @@
-import { LitElement, html, customElement, css } from 'lit-element';
+import { LitElement, html, customElement } from 'lit-element';
 
 @customElement('lit-blog-posts')
 export class BlogPosts extends LitElement {
