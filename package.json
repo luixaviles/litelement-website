@@ -65,7 +65,8 @@
   "author": "litelement-website",
   "license": "MIT",
   "dependencies": {
-    "lit-html": "^1.0.0",
-    "lit-element": "^2.0.1"
+    "@vaadin/router": "^1.7.2",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
   }
 }
