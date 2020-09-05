@@ -42,6 +42,13 @@ const routes = [
           await import('./about/about');
         },
       },
+      {
+        path: 'admin/:section',
+        component: 'lit-admin',
+        action: async () => {
+          await import('./admin/admin');
+        },
+      },
     ],
   },
 ];
