@@ -15,6 +15,17 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'import/named': 'off',
     'import/no-unresolved': 'off',
-    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      { ts: 'never', js: 'never' },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.json'],
+      },
+    },
   },
 };
