@@ -1,12 +1,10 @@
-import { Router } from '@vaadin/router';
+import { Route, Router } from '@vaadin/router';
+import './app';
 
-const routes = [
+const routes: Route[] = [
   {
     path: '/',
     component: 'lit-app',
-    action: async () => {
-      await import('./app');
-    },
     children: [
       {
         path: 'blog',
