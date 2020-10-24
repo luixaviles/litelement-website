@@ -61,7 +61,7 @@ export class BlogCard extends LitElement {
     `;
   }
 
-  private handleClick() {
+  public handleClick() {
     this.dispatchEvent(
       new CustomEvent('readMore', { detail: this.post, composed: true })
     );
