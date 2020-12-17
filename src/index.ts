@@ -1,5 +1,7 @@
-import { Route, Router } from '@vaadin/router';
+import { Commands, Context, Route, Router } from '@vaadin/router';
 import './app';
+import './analytics/analytics';
+import { authGuard, AuthGuard } from './shared/auth/auth-guard';
 
 const routes: Route[] = [
   {
@@ -46,6 +48,37 @@ const routes: Route[] = [
         action: async () => {
           await import('./admin/admin');
         },
+      },
+      {
+        path: 'admin/:section',
+        component: 'lit-admin',
+        action: async () => {
+          await import('./admin/admin');
+        },
+      },
+      {
+        path: 'analytics',
+        component: 'lit-analytics',
+        action: async (context: Context, commands: Commands) => {
+          return await new AuthGuard().pageEnabled(context, commands, '/blog');
+        },
+        // action: authGuard,
+        children: [
+          {
+            path: '/',
+            component: 'lit-analytics-home',
+            action: async () => {
+              await import('./analytics/analytics-home');
+            },
+          },
+          {
+            path: ':period',
+            component: 'lit-analytics-period',
+            action: async () => {
+              await import('./analytics/analytics-period');
+            },
+          },
+        ],
       },
     ],
   },
