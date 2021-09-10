@@ -15,5 +15,5 @@
     "inlineSources": true,
     "rootDir": "./"
   },
-  "include": ["**/*.ts"]
+  "include": ["src/**/*.ts"]
 }
